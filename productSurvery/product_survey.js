@@ -9,6 +9,7 @@ function submitFeedback() {
   const designation = document.getElementById('designation').value;
   const productType = document.getElementById('productType').value;
   const feedback = document.getElementById('feedbackText').value;
+  const experience = document.getElementById('userExperince').value;
 
   const submitButton=document.getElementById('submitBtn');
   alert('Thank you for your valuable feedback')
@@ -18,14 +19,15 @@ function submitFeedback() {
   document.getElementById('userEmail').innerHTML = email;
   document.getElementById('job').innerHTML = job;
   document.getElementById('userDesignation').innerHTML = designation;
-  document.getElementById('userProductChoice').innerHTML = productType;
+  document.getElementById('userProductChoice1').innerHTML = productType;
   document.getElementById('userFeedback').innerHTML = feedback;
+  document.getElementById('userProductChoice2').innerHTML = productType;
+  document.getElementById('userExperiment').innerHTML = experience;
 
   document.getElementById('userInfo').style.display = 'block';
 
 }
 
-submitFeedback();
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
