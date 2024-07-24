@@ -4,6 +4,7 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+const clearAllTasksBtn = document.getElementById("clearAllTasksBtn");
 
 // Functino to add the tast
 
@@ -43,9 +44,21 @@ function clearCompletedTasks() {
     displayTasks();
 }
 
+// Function to clear all the tasks at once
+
+function clearAllTasks() {
+    tasks.length = 0;
+    displayTasks();
+}
+
+
+
+
+
 // addEventListener for addTask and clearCompletedTasks
 
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+clearAllTasksBtn.addEventListener("click", clearAllTasks);
 
 displayTasks();
